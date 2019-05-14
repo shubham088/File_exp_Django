@@ -2,8 +2,11 @@
 from __future__ import unicode_literals
 
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 
 class UploadFilesModel(models.Model):
-    doc = models.FileField(upload_to = 'uploads/')
+    #user = models.OneToOneField(User, on_delete=models.CASCADE)
+    doc = models.FileField(upload_to = 'uploads')
+
+    

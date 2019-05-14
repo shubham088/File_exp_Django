@@ -4,20 +4,29 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .forms import UploadFormDoc
+from .models import UploadFilesModel
 
 # Create your views here.
 
+
+#def uploadPage(request):
+    #return render(request,'fileupload/loadingFiles.html',{})
+
 @login_required
-def uploadPage(request):
-    return render(request,'fileupload/loadingFiles.html',{})
-
-
 def uploadFiles(request):
+
     if request.method == 'POST':
         form = UploadFormDoc(request.POST, request.FILES)
         if form.is_valid():
-            #handle_uploaded_file(request.FILES['file'])
+
+            newdoc = UploadFilesModel(doc = request.FILES['file'])
+            newdoc.save()
             return HttpResponseRedirect('home-page')
     else:
         form = UploadFormDoc()
     return render(request, 'fileupload/loadingFiles.html', {'form': form})
+
+
+def download_files(request):
+    documents = UploadFilesModel.objects.all()
+    return render(request, 'fileupload/downloadFiles.html',{'documents': documents})
