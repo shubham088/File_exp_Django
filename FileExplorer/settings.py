@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
     'users.apps.UsersConfig',
+    'fileupload.apps.FileuploadConfig',
     'crispy_forms',
 ]
 
@@ -122,7 +123,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-LOGIN_REDIRECT_URL = 'home-page'
+LOGIN_REDIRECT_URL = 'load-files'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

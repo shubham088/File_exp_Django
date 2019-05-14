@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Upload Here!!!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+
+<div class="container">
+  <div class="jumbotron">
+    <p>Hi,  <b>{{user}}</b></p>
+    <form class=""  method="post">
+      {{form.as_p}}
+      {% csrf_token %}
+      <a href="{% url 'home-page' %}"> <input type="submit" name="" value="Upload"> </a>
+
+    </form>
+  </div>
+
+</div>
+
+  </body>
+</html>

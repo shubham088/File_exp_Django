@@ -11,7 +11,7 @@
 
       <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'home-page' %}">Home <span class="sr-only">(current)</span></a>
           </li>
       </ul>
 
@@ -19,31 +19,29 @@
        {% if user.is_authenticated %}
       <ul class="navbar-nav mr-auto">
           <li class="nav-item active mr-sm-2">
-            <a class="nav-link" href="#">Logout<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'logout' %}">Logout<span class="sr-only">(current)</span></a>
           </li>
       </ul>
       {% else %}
       <ul class="navbar-nav mr-auto">
           <li class="nav-item active mr-sm-2">
-            <a class="nav-link" href="#">Login<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'login' %}">Login<span class="sr-only">(current)</span></a>
           </li>
       </ul>
       <ul class="navbar-nav mr-auto">
           <li class="nav-item active mr-sm-2">
-            <a class="nav-link" href="#">Register <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'register' %}">Register <span class="sr-only">(current)</span></a>
           </li>
       </ul>
       {% endif %}
     </form>
-
-
     </nav>
   <div class="container text-center">
     <div class="jumbotron">
       <h2>Welcome to File Explorer Application.</h2>
       <p>Upload and Downlaod files.</p>
-      <a href="#"><button type="button" class="btn btn-primary">Login</button></a>
-      <a href="#"><button type="button" class="btn btn-success">Register</button></a>
+      <a href="{% url 'login' %}"><button type="button" class="btn btn-primary">Login</button></a>
+      <a href="{% url 'register' %}"><button type="button" class="btn btn-success">Register</button></a>
     </div>
   </div>
 
