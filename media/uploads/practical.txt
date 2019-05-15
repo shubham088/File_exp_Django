@@ -1,0 +1,42 @@
+- Make use of virtualenv
+- To be developed using django >= 1.9
+- 
+Use MySQL as DBMS.
+
+
+
+
+File Manager
+------------
+-
+ Login and Registration
+-
+ After login User can upload file (one or more)
+- Display progress bar when file uploading
+- 
+include file validation:
+-
+ can upload pdf and videos file only
+- At time can upload Maximum 200 MB size files
+- 
+client and server side validation
+- 
+User can see his/her uploded file files and can download
+
+- Make sure propar error handling
+
+
+Instructions
+------------
+- 
+
+Duration:
+ 5 hours
+- As an response we are expecting a git repo with source files and README.md file containing the steps to run your project.
+
+
+** We will consider the commits done during a particular time duration, you need to push the code at least in 5 different commits
+
+** Do not use ready to go libraries which tends to no code done by you
+
+Best of luck! 

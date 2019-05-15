@@ -1,9 +1,9 @@
 from django import forms
 
-from fileupload.models import UploadFilesModel
+
 
 class UploadFormDoc(forms.Form):
-    file = forms.FileField(
-        label='Select a file',
-        help_text='max. 42 megabytes'
-    )
+
+    title = forms.CharField(max_length=30)
+    description = forms.CharField(max_length=50)
+    file = forms.FileField()

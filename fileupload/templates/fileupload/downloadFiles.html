@@ -7,15 +7,23 @@
 
   </head>
   <body>
-    {% if documents %}
-        <ul>
-        {% for document in documents %}
-            <li><a href="{{ document.doc.url }}">{{ document.doc }}</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No documents.</p>
-    {% endif %}
+    <div class="container">
+      <div class="jumbotron">
+        <h4>Hi,  {{user}} </h4>
+        <p>Here is the list of documents you can download. Just click on the link.</p>
+        {% if documents %}
+            <ul>
+            {% for document in documents %}
+                <li><a href="{{ document.doc.url }}">{{ document.doc }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No documents.</p>
+        {% endif %}
+      </div>
+
+    </div>
+
 
   </body>
 </html>
