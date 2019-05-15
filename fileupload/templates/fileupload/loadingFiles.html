@@ -6,6 +6,36 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">File Explorer</a>
+
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'home-page' %}">Home <span class="sr-only">(current)</span></a>
+          </li>
+      </ul>
+
+    <form class="form-inline my-4 my-lg-0">
+       {% if user.is_authenticated %}
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item active mr-sm-2">
+            <a class="nav-link" href="{% url 'logout' %}">Logout<span class="sr-only">(current)</span></a>
+          </li>
+      </ul>
+      {% else %}
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item active mr-sm-2">
+            <a class="nav-link" href="{% url 'login' %}">Login<span class="sr-only">(current)</span></a>
+          </li>
+      </ul>
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item active mr-sm-2">
+            <a class="nav-link" href="{% url 'register' %}">Register <span class="sr-only">(current)</span></a>
+          </li>
+      </ul>
+      {% endif %}
+    </form>
+    </nav>
 
 <div class="container">
   <div class="jumbotron">
