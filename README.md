@@ -4,7 +4,7 @@
 2./register/  url  -> Register urself
 
 3./login/ url  -> login page
-After login you will land up to upload page where we can select the files . But it's not getting saved in the database. Manually it is working.
+After login you will land up to upload page where we can select the files . 
 
 4./logout/  url  -> Log out 
 
