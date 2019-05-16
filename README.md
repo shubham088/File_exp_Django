@@ -12,5 +12,6 @@ After login you will land up to upload page where we can select the files .
 
 5./download/  url  ->   It will list out all the files which is saved in the DB.
 
+=> used CRISPY forms .
 
 I used default SQLITE only because of some issue with my system .
